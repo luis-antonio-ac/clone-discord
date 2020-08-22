@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Separator } from './styles';
 import ServerButton from '../ServerButton';
 
 const ServerList: React.FC = () => {
@@ -8,7 +8,7 @@ const ServerList: React.FC = () => {
     <Container>
       <ServerButton isHome={true} />
 
-      {/* <Separator /> */}
+      <Separator />
 
       <ServerButton />
       <ServerButton />
