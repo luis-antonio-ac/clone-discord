@@ -25,6 +25,7 @@ export const Button = styled.button<Props>`
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    transition: all 0.2s;
   }
 
   &::before {
@@ -39,7 +40,7 @@ export const Button = styled.button<Props>`
     border-radius: 50%;
 
     content: '';
-    display: ${props => props.hasNotifications ? 'inline' : 'none'};
+    display: ${(props) => (props.hasNotifications ? 'inline' : 'none')};
   }
 
   &::after {
@@ -61,11 +62,13 @@ export const Button = styled.button<Props>`
     font-weight: bold;
     color: #fff;
 
-    content: '${props => props.mentions && props.mentions}';
-    display: ${props => props.mentions && props.mentions > 0 ? 'inline' : 'none'};
+    content: '${(props) => props.mentions && props.mentions}';
+    display: ${(props) =>
+      props.mentions && props.mentions > 0 ? 'inline' : 'none'};
   }
 
   &.active,
+  > img:hover,
   &:hover {
     border-radius: 16px;
     background-color: ${(props) =>
