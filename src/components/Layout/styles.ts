@@ -10,4 +10,6 @@ export const Grid = styled.div`
     'SL SN CI CI'
     'SL CL CD UL'
     'SL UI CD UL';
+
+  height: 100vh;
 `;
